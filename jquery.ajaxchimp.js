@@ -105,7 +105,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                     }
                     label.html(msg);
 
-                    label.show(2000);
+                    label.css('display', 'block');
                     if (settings.callback) {
                         settings.callback(resp);
                     }
@@ -137,7 +137,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
                 ) {
                     submitMsg = $.ajaxChimp.translations[settings.language]['submit'];
                 }
-                label.html(submitMsg).show(2000);
+                label.html(submitMsg).css('display', 'block');
 
                 return false;
             });

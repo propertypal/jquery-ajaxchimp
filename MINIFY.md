@@ -1,10 +1,10 @@
 Here for easy reference
 
 ```
-npm install uglify-js -g
+npm install uglify-js
 ```
 
-```js
-uglifyjs jquery.ajaxchimp.js -o jquery.ajaxchimp.min.js
-uglifyjs jquery.ajaxchimp.langs.js -o jquery.ajaxchimp.langs.min.js
+```
+./node_modules/uglify-js/bin/uglifyjs jquery.ajaxchimp.js -o jquery.ajaxchimp.min.js
+./node_modules/uglify-js/bin/uglifyjs jquery.ajaxchimp.langs.js -o jquery.ajaxchimp.langs.min.js
 ```
