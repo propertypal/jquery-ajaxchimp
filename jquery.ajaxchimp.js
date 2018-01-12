@@ -31,7 +31,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
     $.ajaxChimp = {
         responses: {
             'We have sent you a confirmation email'                                             : 0,
-            'Please enter a value'                                                              : 1,
+            'Please enter a valid email address'                                                : 1,
             'An email address must contain a single @'                                          : 2,
             'The domain portion of the email address is invalid (the portion after the @: )'    : 3,
             'The username portion of the email address is invalid (the portion before the @: )' : 4,
