@@ -31,14 +31,22 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
     $.ajaxChimp = {
         responses: {
             'We have sent you a confirmation email'                                             : 0,
-            'Please enter a valid email address'                                                : 1,
+            'Please enter a value'                                                              : 1,
             'An email address must contain a single @'                                          : 2,
             'The domain portion of the email address is invalid (the portion after the @: )'    : 3,
             'The username portion of the email address is invalid (the portion before the @: )' : 4,
             'This email address looks fake or invalid. Please enter a real email address'       : 5
         },
         translations: {
-            'en': null
+            'en': {
+                'submit': 'Registrazione in corso...',
+                0: 'We have sent you a confirmation email',
+                1: 'Please enter a valid email address',
+                2: 'An email address must contain a single @',
+                3: 'The domain portion of the email address is invalid (the portion after the @: )',
+                4: 'The username portion of the email address is invalid (the portion before the @: )',
+                5: 'This email address looks fake or invalid. Please enter a real email address'
+            }
         },
         init: function (selector, options) {
             $(selector).ajaxChimp(options);
@@ -95,7 +103,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
 
                     // Translate and display message
                     if (
-                        settings.language !== 'en'
+                        settings.language !== null
                         && $.ajaxChimp.responses[msg] !== undefined
                         && $.ajaxChimp.translations
                         && $.ajaxChimp.translations[settings.language]
